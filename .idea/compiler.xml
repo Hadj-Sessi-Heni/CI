@@ -6,17 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ExamThourayaS2" />
+        <module name="CI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ExamenTrain" target="1.8" />
+      <module name="CI" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ExamThourayaS2" options="-parameters" />
-      <module name="ExamenTrain" options="-parameters" />
+      <module name="CI" options="-parameters" />
     </option>
   </component>
 </project>
