@@ -43,7 +43,11 @@ pipeline {
                   nexusArtifactUploader artifacts: [[artifactId: 'ExamThourayaS2', classifier: '', file: '/var/lib/jenkins/workspace/projetci/target/ExamThourayaS2-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus-snapshots', groupId: 'tn.esprit', nexusUrl: '192.168.95.158:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nexus-snapshots', version: '0.0.1-SNAPSHOT'
                  }
               }
-
+              stage('Build Docker Image') {
+                 steps {
+                 sh 'docker build -t henihs98/springci:1.0.0 .'
+                 }
+              }
               }
           }
 
