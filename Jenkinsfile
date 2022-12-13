@@ -48,6 +48,18 @@ pipeline {
                  sh 'docker build -t henihs98/springci:1.0.0 .'
                  }
               }
+              stage('Push Docker Image') {
+                   steps {
+                     sh "docker login -u henihs98 -p 203JMT1661"
+                     }
+                     sh 'docker push henihs98/springci:1.0.0'
+                   }
+              }
+              stage('DOCKER COMPOSE') {
+                   steps {
+                      sh 'docker-compose up -d --build'
+                   }
+              }
               }
           }
 
